@@ -1,6 +1,6 @@
 ## Issues while installing eSim in ubuntu 23.04 using the install-esim.sh script
 
-# Isuue 1 : line number -    file-
+# Isuue 1 : line number: 158-168   file: install-eSim.sh
 ```Description
 error: externally-managed-environment
 
@@ -52,7 +52,7 @@ note: If you believe this is a mistake, please contact your Python installation 
 hint: See PEP 668 for the detailed specification.
  using the virtual environment aproach , However I also tried the pipx but was not able to install one package with it 
 
-# Issue 2 : line number- 53-54  : file- ghdl/install-ghdl.sh 
+# Issue 2 : line number: 53-54  : file:nghdl/install-nghdl.sh 
 ```
 Error while installing llvm-9 and llvm-9-dev
 
@@ -64,7 +64,7 @@ Temporary Fix :
 I build llvm 9.0.1 from source on my virtual machine running Ubuntu 23.04
 ```
 
-# Issue 4 : line number  : file - install-ghdl.sh
+# Issue 4 : line number:274 : file:nghdl/install-nghdl.sh
 GHDL installation failed
 ```
 Compilation failed
@@ -79,32 +79,14 @@ make: *** [Makefile:344: ghdl1-llvm] Error 2
 Reason : Unknown
 Fix :  May be fixed if we compile with older versions of ada compiler
 
-# Issue 5 : line no  : file - install-ghdl.sh
+# Issue 5 : line no: 275  file:nghdl/install-nghdl.sh
 Verilator installation failed 
 fix : sucessfuly fixed the issue by adding the "memory" header file which was causing compilation error
 
 
-
-##############
-
-Verilator was installed succesfully
-
-
-Summary of Tasks Done 
-
-                                                                            Summary of install-esim.sh 
-                                                                            
-                                                                            # Calling functions
-                                                                                createConfigFile     - sucess
-                                                                                installDependency    - sucess
-                                                                                installKicad         - sucess
-                                                                                copyKicadLibrary     - sucess
-                                                                                installNghdl         - Failed
-                                                                                installSky130Pdk     - sucess
-        
-                                                                                
-                                                                                createDesktopStartScript - sucess
-                                                                                
+## Summary Of Issues
+# install-eSim.sh 
+                                                                               
   <table>
     <tr>
         <th>Function</th>
@@ -113,12 +95,12 @@ Summary of Tasks Done
     </tr>
     <tr>
         <td>createConfigFile</td>
-        <td>success</td>
-        <td>success</td>
+        <td>-</td>
+        <td>-</td>
     </tr>
     <tr>
         <td>installDependency</td>
-        <td>success</td>
+        <td>Failed</td>
         <td>success</td>
     </tr>
     <tr>
@@ -143,20 +125,12 @@ Summary of Tasks Done
     </tr>
     <tr>
         <td>createDesktopStartScript</td>
-        <td>success</td>
-        <td>success</td>
+        <td>-</td>
+        <td>-</td>
     </tr>
 </table>
 
-
-
-Sumarry of install-ghdl.sh 
-
-    installGHDL      -failed
-    installVerilator  - sucess 
-    installNGHDL      - sucess 
-    createConfigFile  -sucess
-    createSoftLink    -sucess
+# nghdl/install-nghdl.sh
 
 <table>
   <thead>
@@ -174,7 +148,7 @@ Sumarry of install-ghdl.sh
     </tr>
     <tr>
       <td>installVerilator</td>
-      <td>success</td>
+      <td>failed</td>
       <td>success</td>
     </tr>
     <tr>
@@ -184,20 +158,20 @@ Sumarry of install-ghdl.sh
     </tr>
     <tr>
       <td>createConfigFile</td>
-      <td>success</td>
-      <td>success</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <td>createSoftLink</td>
-      <td>success</td>
-      <td>success</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
   </tbody>
 </table>
 
 
 ## Conclusion 
-GHDL compilation failed . 
+Only GHDL compilation failed .  otherwise 
 All other errors are fixed 
 
 
