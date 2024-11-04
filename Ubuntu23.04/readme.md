@@ -177,6 +177,20 @@ Only GHDL compilation failed .  otherwise
 All other errors are fixed 
 
 
+### Instructions
+
+please run the install-eSim.sh scripts inside the eSim2.4 folder
+
+ # To compile llvm 
+ ```
+mkdir mybuild
+cd mybuild
+cmake /path/to/llvm-9/llvm
+cmake --build .
+cmake --build . --target install
+
+```
+
 
 
 
