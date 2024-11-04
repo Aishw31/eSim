@@ -1,5 +1,7 @@
 ## Issues while installing eSim in ubuntu 23.04 using the install-esim.sh script
 
+Note : The line number given here are w.r.t original scripts
+
 # Isuue 1 : line number: 158-168   file: install-eSim.sh
 ```Description
 error: externally-managed-environment
